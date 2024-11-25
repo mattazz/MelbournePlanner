@@ -26,17 +26,22 @@ def main():
     print("Enjoy your trip to Melbourne!")
 
 
+def printMainTitle():
+    print(
+        "######################################## WELCOME TO THE MELBOURNE TRAVEL PLANNER! ######################################\n"
+    )
+    print(
+        "This program provides you with a list of activiites for up to two weeks based on your budget and activity preferences!"
+    )
+    print(
+        "########################################################################################################################\n"
+    )
+
+
 def get_user_preferences():
     while True:
-        print(
-            "######################################## WELCOME TO THE MELBOURNE TRAVEL PLANNER! ######################################\n"
-        )
-        print(
-            "This program provides you with a list of activiites for up to two weeks based on your budget and activity preferences!"
-        )
-        print(
-            "########################################################################################################################\n"
-        )
+        printMainTitle()
+
         trip_duration = get_trip_duration()
         activity_preferences = get_activity_preferences()
         budget_level = get_budget()
@@ -69,6 +74,11 @@ def get_user_preferences():
 
 
 def get_trip_duration():
+    """Asks user for input and then returns as int
+
+    Returns:
+        int: Duration of intended trip
+    """
     # Prompt user for duration of stay
     while True:
         try:
@@ -84,6 +94,11 @@ def get_trip_duration():
 
 
 def get_budget():
+    """Asks user for budget
+
+    Returns:
+        string: User budget choice
+    """
     while True:
         # Display budget options.
         print("##### Please select a budget level from below. #####")
@@ -107,6 +122,11 @@ def get_budget():
 
 
 def get_activity_preferences():
+    """Asks user for list of selected activities
+
+    Returns:
+        list: List of activities
+    """
     activities = [
         "Parks and Gardens",
         "Beaches and Surf Spots",
