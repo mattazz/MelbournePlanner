@@ -5,8 +5,8 @@ def getUserDate():
     userArrivalDate = input("When are you planning to go? (ex. mm/dd/yy)")
     userLeavingDate = input("When are you planning to leave? (ex. mm/dd/yy)")
 
-    convertedArrival = datetime.strptime(userArrivalDate, "%y/%m/%d")
-    convertedLeaving = datetime.strptime(userLeavingDate, "%y/%m/%d")
+    convertedArrival = datetime.strptime(userArrivalDate, "%m/%d/%y")
+    convertedLeaving = datetime.strptime(userLeavingDate, "%m/%d/%y")
 
     return (convertedArrival, convertedLeaving)
 
